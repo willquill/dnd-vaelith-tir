@@ -78,27 +78,32 @@ More info on custom domain [here](https://medium.com/@hossainkhan/using-custom-d
 
 ### Push to your master branch for good measure
 
-```git add -A
+```sh
+git add -A
 git commit -m "initial commit"
-git push -u origin master
+git push -u origin main
 ```
 
 ### Deploy
 
-```mkdocs gh-deploy```
+`mkdocs gh-deploy`
 
 ## Notes about updating site after initial deployment
 
-Never modify files directly within the ```site``` directory.
+Never modify files directly within the `site` directory.
 
 To make changes to your website after the initial deploy:
 
 - Modify your yml and md files as needed.
 
-- ```mkdocs gh-deploy```
+- `mkdocs gh-deploy`
 
-Breakdown of what ```mkdocs gh-deploy``` does:
+Breakdown of what `mkdocs gh-deploy` does:
 
-- Repopulates the ```site``` directory with a static site generated from your md and yml files.
+- Repopulates the `site` directory with a static site generated from your md and yml files.
 
-- Pushes the contents of the ```site``` directory into the gh-pages branch on Github.
+- Pushes the contents of the `site` directory into the gh-pages branch on Github.
+
+## LICENSE
+
+Distributed under the MIT License. See LICENSE for more information.
