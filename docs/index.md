@@ -2,11 +2,13 @@
 
 ## Players
 
-- [Harbeck Frostbeard](players/harbeck.md)
+- [Cade Evenword](players/cade.md) - Human Rogue
 
-- [Hammer](players/hammer.md)
+- [Harbeck Frostbeard](players/harbeck.md) - Dwarf Cleric
 
-- [Waldor](players/waldor.md)
+- [Hammer](players/hammer.md) - Dwarf Fighter
+
+- [Waldor](players/waldor.md) - Elf Wizard
 
 ## Sessions
 

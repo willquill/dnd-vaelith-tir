@@ -10,7 +10,7 @@ Built using the amazing [MkDocs](https://www.mkdocs.org)
 
 ## Clone the repo
 
-`git clone https://github.com/willquill/dnd-icespire.git`
+`git clone https://github.com/willquill/dnd-vaelith-tir.git`
 
 ## Modify files
 
@@ -20,13 +20,13 @@ Modify mkdocs.yml to reflect your own site_name, pages, and theme.
 
 `mkdocs build`
 
-`echo "site/" >> .gitignore`
+`echo "site/" > .gitignore`
 
 ## Test
 
 `mkdocs serve`
 
-Visit http://127.0.0.1:8000 in your browser to see it in action.
+Visit [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser to see it in action.
 
 Wanna know what's _really_ cool? You can edit your files on the fly and see the effect while `mkdocs serve` is active.
 
@@ -58,7 +58,7 @@ Go to github and create a public repository.
 
 Add the remote repo using the Host name from the config file above and use youruser/yourrepo.git
 
-```git remote add origin git@github-as-willquill:willquill/dnd-icespire.git```
+`git remote add origin git@github-as-willquill:willquill/dnd-vaelith-tir.git`
 
 ### If you've enabled e-mail privacy in Github
 
