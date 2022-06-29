@@ -21,9 +21,21 @@ If either weapon has the thrown property, you can throw the weapon, instead of m
 
 Once per short rest, you can use a bonus action to regain 1d10 + 1 HP.
 
+### Action Surge
+
+Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.
+
+Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn.
+
 ### Martial Archetype: Battle Master
 
-Not until level 3
+At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. Choose Champion, Battle Master, or Eldritch Knight, all detailed at the end of the class description. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.
+
+### Extra Attack
+
+Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.
+
+The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class.
 
 ## Racial Traits
 
