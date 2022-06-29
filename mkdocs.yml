@@ -1,0 +1,18 @@
+site_name: The Seven Shards of Vælith-Tir 
+nav: 
+    - Home: index.md
+    - Game: game.md
+    - Players:
+      - Harbeck Frostbeard: players/harbeck.md
+      - Hammer: players/hammer.md
+      - Waldor: players/waldor.md
+    - Sessions:
+      - '20220628: Foxbridge': sessions/20220628.md
+      - '20220626: Gettin goin': sessions/20220626.md
+      - '20220528: Session 1': sessions/20220528.md
+      - '20220501: The Hanging': sessions/20220501.md     
+theme:
+    name: material
+    highlightjs: true
+    nav_style: dark
+    
