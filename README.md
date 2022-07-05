@@ -1,6 +1,18 @@
 # How to use this repo for your own DnD campaign
 
-Built using the amazing [MkDocs](https://www.mkdocs.org)
+Built using the amazing 
+
+## Architecture
+
+There are a few different things going on in this repo. See Thing 1 and Thing 2 below for an explanation.
+
+### Thing 1
+
+The gh-pages directly contains the files and directories necessary to deploy this on GitHub Pages using [MkDocs](https://www.mkdocs.org). This was the first iteration of this D&D campaign website, but as of today (2022-07-05), I'm going to try this out in Bookstack in Linode instead.
+
+### Thing 2
+
+Bookstack running as a docker-compose file in a Docker Linode container. More about this at the end of the README.
 
 ## Setup
 

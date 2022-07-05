@@ -1,1 +1,3 @@
 site/
+docker/config/bookstack/*
+docker/config/bookstack_db/*
