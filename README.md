@@ -1,6 +1,6 @@
 # How to use this repo for your own DnD campaign
 
-Built using the amazing 
+Built using the amazing [MkDocs](https://www.mkdocs.org).
 
 ## Architecture
 
@@ -115,6 +115,28 @@ Breakdown of what `mkdocs gh-deploy` does:
 - Repopulates the `site` directory with a static site generated from your md and yml files.
 
 - Pushes the contents of the `site` directory into the gh-pages branch on Github.
+
+## Bookstack in Linode
+
+Here's what I did to set it up:
+
+1. Make sure my `docker/.env` file is appropriately set up. You can use my `docker/.env.sample` as an example.
+
+2. Create account at Linode
+
+3. Go to Marketplace > Docker, and then fill out the docker options.
+
+### Docker Options
+
+Resource to download: `https://raw.githubusercontent.com/willquill/dnd-vaelith-tir/main/docker/docker-compose.yml`
+
+Leave "Command to run?" blank
+
+Add a user and password, and (optionally) an SSH public key.
+
+
+### Docker Options
+
 
 ## LICENSE
 

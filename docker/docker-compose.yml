@@ -7,10 +7,10 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - APP_URL=
+      - APP_URL=$APP_URL
       - DB_HOST=bookstack_db
       - DB_USER=bookstack
-      - DB_PASS=bookstackdbpass
+      - DB_PASS=$DB_PASS
       - DB_DATABASE=bookstackapp
     volumes:
       - ./config/bookstack:/config
@@ -25,11 +25,21 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - MYSQL_ROOT_PASSWORD=bookstackroot
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
       - TZ=America/Chicago
       - MYSQL_DATABASE=bookstackapp
       - MYSQL_USER=bookstack
-      - MYSQL_PASSWORD=bookstackdbpass
+      - MYSQL_PASSWORD=$DB_PASS
     volumes:
       - ./config/bookstack_db:/config
     restart: unless-stopped
+  proxy:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./config/proxy/data:/data
+      - ./config/proxy/letsencrypt:/etc/letsencrypt

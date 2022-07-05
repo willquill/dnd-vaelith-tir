@@ -1,3 +1,6 @@
 site/
 docker/config/bookstack/*
 docker/config/bookstack_db/*
+docker/.env
+docker/config/proxy/data/*
+docker/config/proxy/letsencrypt/*
