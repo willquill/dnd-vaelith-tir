@@ -1,13 +1,13 @@
 ---
-version: "2"
+version: '3'
 services:
   bookstack:
-    image: lscr.io/linuxserver/bookstack
+    image: lscr.io/linuxserver/bookstack:latest
     container_name: bookstack
     environment:
       - PUID=1000
       - PGID=1000
-      - APP_URL=$APP_URL
+      - APP_URL=https://$BOOKSTACK_DOMAIN.$DOMAIN
       - DB_HOST=bookstack_db
       - DB_USER=bookstack
       - DB_PASS=$DB_PASS
@@ -20,7 +20,7 @@ services:
     depends_on:
       - bookstack_db
   bookstack_db:
-    image: lscr.io/linuxserver/mariadb
+    image: lscr.io/linuxserver/mariadb:latest
     container_name: bookstack_db
     environment:
       - PUID=1000
@@ -33,13 +33,28 @@ services:
     volumes:
       - ./config/bookstack_db:/config
     restart: unless-stopped
-  proxy:
-    image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
-    ports:
-      - '80:80'
-      - '81:81'
-      - '443:443'
+  swag:
+    image: lscr.io/linuxserver/swag:latest
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - URL=$DOMAIN
+      - VALIDATION=http
+      - SUBDOMAINS=$BOOKSTACK_DOMAIN #,others
+      - DNSPLUGIN=cloudflare #optional
+      - PROPAGATION= #optional
+      - DUCKDNSTOKEN= #optional
+      - EMAIL= #optional
+      - ONLY_SUBDOMAINS=true #optional
+      - EXTRA_DOMAINS= #optional
+      - STAGING=false #optional
     volumes:
-      - ./config/proxy/data:/data
-      - ./config/proxy/letsencrypt:/etc/letsencrypt
+      - ./config/swag:/config
+    ports:
+      - 443:443
+      - 80:80 #optional
+    restart: unless-stopped
