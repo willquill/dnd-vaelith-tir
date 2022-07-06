@@ -20,7 +20,7 @@ This deploys Bookstack from a docker-compose file in a Docker Linode container.
 
 Here's what I did to set it up:
 
-1. Make sure my `docker/.env` file is appropriately set up. You can use my `docker/.env.sample` as an example.
+1. Make sure your `docker/.env` file is appropriately set up. You can use my `docker/.env.sample` as an example. Also, put your own subdomain for the server_name in `docker/config/swag/nginx/proxy-confs/bookstack.subdomain.conf`
 
 2. Create account at Linode
 
@@ -44,9 +44,19 @@ The Linode interface will show you the IP of your new public host. Use this as t
 
 For example, my domain is `rakara.net`, so I created an A record pointing the `vaelith-tir` subdomain in the `rakara.net` domain to the public IP of my Linode host.
 
-After deployment, you will need to SSH into your new Linode host and run the following command, replacing `vaelith-tir` with the name of your subdomain if your subdomain is not `bookstack`:
+### Post-Deployment
 
-`sed -i 's/bookstack./vaelith-tir/g' /root/config/swag/nginx/proxy-confs/bookstack.subdomain.conf.sample`
+If you put your own subdomain for the server_name in `docker/config/swag/nginx/proxy-confs/bookstack.subdomain.conf` before deploying to Linode, then the proxy is already configured correctly.
+
+But if you didn't do that, then it's going to be using my subdomain (`vaelith-tir`), so you'll need to edit that file and then run `docker restart swag`.
+
+If you only have `bookstack.subdomain.conf.sample` in that path (you are missing `bookstack.subdomain.conf`), then something went wrong and you will need to follow these nginx conf steps:
+
+#### NGINX Conf
+
+SSH into your new Linode host and run the following command, replacing `vaelith-tir` with the name of your subdomain if your subdomain is not `bookstack`:
+
+`sed -i 's/bookstack./vaelith-tir./g' /root/config/swag/nginx/proxy-confs/bookstack.subdomain.conf.sample`
 
 Followed by:
 

@@ -1,6 +1,11 @@
+# Do not add these files to git
 site/
 docker/config/bookstack/*
 docker/config/bookstack_db/*
 docker/.env
 docker/config/proxy/data/*
 docker/config/proxy/letsencrypt/*
+docker/config/swag/*
+
+# Provide an exception for the below files
+!docker/config/swag/nginx/proxy-confs/bookstack.subdomain.conf
