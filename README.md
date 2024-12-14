@@ -42,7 +42,7 @@ By then creating this Docker Linode, it will automatically deploy three containe
 
 The Linode interface will show you the IP of your new public host. Use this as the A record in your DNS records for the domain you are using.
 
-For example, my domain is `rakara.net`, so I created an A record pointing the `vaelith-tir` subdomain in the `rakara.net` domain to the public IP of my Linode host.
+For example, my domain is `willpc.net`, so I created an A record pointing the `vaelith-tir` subdomain in the `willpc.net` domain to the public IP of my Linode host.
 
 ### Post-Deployment
 
@@ -152,7 +152,7 @@ More info [here](https://stackoverflow.com/questions/43378060/meaning-of-the-git
 
 #### Add a CNAME if you want a custom domain
 
-`echo 'vaelith-tir.rakara.net' >> docs/CNAME`
+`echo 'vaelith-tir.willpc.net' >> docs/CNAME`
 
 More info on custom domain [here](https://medium.com/@hossainkhan/using-custom-domain-for-github-pages-86b303d3918a)
 
